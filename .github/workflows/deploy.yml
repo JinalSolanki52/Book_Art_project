@@ -13,4 +13,4 @@ jobs:
     steps:
        - name: Trigger Test URL
          run: |
-           curl -X POST "https://example.com/blog/random-post-12345"
+           curl -X POST "https://postman-echo.com/post" -d "test=triggered"
