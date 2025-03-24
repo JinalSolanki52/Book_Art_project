@@ -13,4 +13,4 @@ jobs:
     steps:
        - name: Trigger Test URL
          run: |
-           curl -X POST "https://example.com/blog/random-post-12345"
+           curl -X POST "	https://webhook.site/74bbdd4e-0d04-48d9-b574-1c7cff02ab47"
