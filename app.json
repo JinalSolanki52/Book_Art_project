@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MyExpoApp",
-    "slug": "myexpoapp",
+    "name": "react-web-app",
+    "slug": "react-web-app",
     "version": "1.0.0",
     "sdkVersion": "53.0.0",
     "platforms": ["ios", "android"],
