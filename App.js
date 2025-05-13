@@ -1,51 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/Navbar';
-import Messages from './components/Messages';
-import saved from './components/saved';
-import Channels from './components/Channels';
-import People from './components/People';
-import { BrowserRouter, NavLink, Route, Router, Routes } from 'react-router-dom';
+// App.js (React Native version)
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { View, Text, Button } from 'react-native';
 
-
-function App() {
-  const clickme = () => alert("POP-UP BOX");
+function HomeScreen({ navigation }) {
   return (
-  <BrowserRouter>
-    <div className="App">
-      <header className="App-header">
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-         </a> */}         
-      <div className='NavbarItem'>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/Channels">Channels</NavLink>
-          <NavLink to="/Messages">Messages</NavLink>
-          <NavLink to="/People">People</NavLink>
-          <NavLink to="/saved">Saved</NavLink>
-      </div>
-
-      <Routes>
-          <Route path='/' element={<Navbar fun={clickme} name="jinal"/>}/>
-          <Route path='/Channels' element={<Channels/>}/>
-          <Route path='/Messages' element={<Messages/>}/>
-          <Route path='/People' element={<People/>}/>
-          <Route path='/saved' element={<saved/>}/>
-      </Routes>
-        
-      <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header> 
-    </div>
-  </BrowserRouter> 
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Welcome, Jinal!</Text>
+      <Button title="Go to Channels" onPress={() => navigation.navigate('Channels')} />
+    </View>
   );
 }
 
-export default App;
+function ChannelsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>This is the Channels page</Text>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Channels" component={ChannelsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}

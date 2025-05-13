@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "MyExpoApp",
+    "slug": "myexpoapp",
+    "version": "1.0.0",
+    "sdkVersion": "53.0.0",
+    "platforms": ["ios", "android"],
+    "orientation": "portrait",
+    "updates": {
+      "url": "https://u.expo.dev/c9a66eb1-559b-4c1f-88fb-60de5c0d6127"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {},
+    "android": {},
+    "extra": {
+      "eas": {
+        "projectId": "c9a66eb1-559b-4c1f-88fb-60de5c0d6127"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c9a66eb1-559b-4c1f-88fb-60de5c0d6127"
+    },
+    "android": {},
+    "ios": {}
+  }
+}
