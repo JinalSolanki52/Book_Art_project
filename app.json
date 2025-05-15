@@ -11,7 +11,9 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {},
-    "android": {},
+    "android": {
+      "package": "com.defx.reactwebapp"
+    },
     "extra": {
       "eas": {
         "projectId": "c9a66eb1-559b-4c1f-88fb-60de5c0d6127"
